@@ -1,13 +1,13 @@
 {% set name = "xarray_selafin" %}
-{% set version = "0.1.9" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 277e5efebefb69a31cfac5fb1464d57c401893326d4518811b7cfefda30dc0c9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2e0966364047a252e920dfcce1cdf0eb1311a6349d434579ba7f455a3debd8ba
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
