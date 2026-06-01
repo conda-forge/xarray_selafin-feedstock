@@ -1,5 +1,5 @@
 {% set name = "xarray_selafin" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 081935661f408c17593a02205f86a930de020b6c40c99db096b01034670a64a3
+  sha256: 8dc4a78dc251dc20d6fd6616104a376b3281c111d800529784eedc2d062ef795
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
