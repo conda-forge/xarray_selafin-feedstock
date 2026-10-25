@@ -1,13 +1,13 @@
 {% set name = "xarray_selafin" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 081935661f408c17593a02205f86a930de020b6c40c99db096b01034670a64a3
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ff24e5f0f14e90ad9badab7a122d8c31ebc30a0cbc124567a00ff4a97717c253
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -24,6 +24,7 @@ requirements:
     - python >=3.9
     - numpy
     - xarray
+    - python-serafin >=0.2
 
 test:
   imports:
